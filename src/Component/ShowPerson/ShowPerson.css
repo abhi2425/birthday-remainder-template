@@ -1,0 +1,32 @@
+.showPerson {
+  display: flex;
+  background-color: rgb(242, 245, 247);
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px;
+}
+.showPersonImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: yellow;
+  align-self: center;
+  margin-right: 20px;
+}
+.showPersonImage image {
+  width: 100%;
+}
+.showPersonDetails {
+  align-self: center;
+}
+.personName {
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  opacity: 0.7;
+  font-weight: bold;
+}
+.personAge {
+  font-size: 20px;
+  opacity: 0.6;
+}

@@ -1,0 +1,32 @@
+.person {
+  display: flex;
+  background-color: rgb(242, 245, 247);
+  padding: 10px;
+  width: 400px;
+}
+.person:hover {
+  border: solid 0.1px hotpink;
+}
+.personImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background-color: yellow;
+  margin: 2px 8px;
+  align-self: center;
+}
+.personImage image {
+  width: 100%;
+}
+.personDetails {
+  align-self: center;
+}
+.name {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  opacity: 0.7;
+  font-weight: bold;
+}
+.age {
+  opacity: 0.6;
+}
