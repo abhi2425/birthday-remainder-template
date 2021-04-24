@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './Birthday.css'
-import Person from '../Person'
+import './Dashboard.css'
+import Person from '../Person/Person'
 import ShowPerson from '../ShowPerson/ShowPerson'
 import Modal from '../Modal/Modal'
 import { personList } from '../../utils/personsList'
@@ -9,7 +9,7 @@ import { default as UploadPreview } from '../UploadPreview/UploadPreview'
 import { getListFromLocalStorage } from '../../utils/localStorage'
 
 const list = personList()
-class Birthday extends Component {
+class Dashboard extends Component {
    state = {
       showList: true,
       showModal: false,
@@ -134,4 +134,4 @@ class Birthday extends Component {
       )
    }
 }
-export default Birthday
+export default Dashboard

@@ -1,10 +1,10 @@
-import Birthday from './Component/Birthday/Birthday'
+import Dashboard from './Component/Dashboard/Dashboard'
 
 const App = () => {
    return (
       <div className='app'>
          <div className='container'>
-            <Birthday />
+            <Dashboard />
          </div>
       </div>
    )
