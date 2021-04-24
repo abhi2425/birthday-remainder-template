@@ -1,15 +1,23 @@
-import React from "react";
-import "./Person.css"
-const persons = (props) => (
-    <div className="person" onClick={props.clicked} >
-        <div className="personImage">
-            <image src={props.image} alt={props.name} />
-        </div>
-        <div className="personDetails">
-            <div className="name">{props.name}</div>
-            <div className="age">{props.age}</div>
-        </div>
-    </div>
-);
+import React, { memo } from 'react'
+import './Person.css'
+const Persons = ({ clicked, name, age, image, remove }) => {
+   return (
+      <article className='person'>
+         <div style={{ display: 'flex', cursor: 'pointer' }} onClick={clicked}>
+            <div className='personImage'>
+               <img src={image} alt={name} />
+            </div>
+            <div className='personDetails'>
+               <div className='name'>{name}</div>
+               <div className='age'>{age}</div>
+            </div>
+         </div>
 
-export default persons;
+         <i className='delete-icon' onClick={remove}>
+            remove
+         </i>
+      </article>
+   )
+}
+
+export default memo(Persons)

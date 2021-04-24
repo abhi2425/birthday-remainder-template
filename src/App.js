@@ -1,14 +1,13 @@
-import './App.css';
-import Birthday from "./Container/Birthday/Birthday"
+import Birthday from './Component/Birthday/Birthday'
 
-function App() {
-  return (
-    <div className="app">
-      <div>
-        <Birthday hello={2425} />
+const App = () => {
+   return (
+      <div className='app'>
+         <div className='container'>
+            <Birthday />
+         </div>
       </div>
-    </div>
-  );
+   )
 }
 
-export default App;
+export default App

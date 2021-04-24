@@ -1,0 +1,40 @@
+.preview {
+   display: flex;
+   padding: 5rem;
+}
+.preview input {
+   padding: 10px 20px;
+   font-size: 20px;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   display: block;
+   color: rgb(94, 94, 94);
+   border: 2px solid hotpink;
+}
+.preview input:focus {
+   outline: none;
+}
+.preview img {
+   width: 250px;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 100%;
+   margin-right: 3rem;
+}
+.preview .details {
+   display: flex;
+   flex-direction: column;
+}
+@media screen and (max-width: 700px) {
+   .preview {
+      flex-direction: column;
+   }
+   .preview img {
+      align-self: center;
+      margin: 0;
+      margin-bottom: 1rem;
+   }
+   .modal-container {
+      margin-top: 3rem;
+   }
+}
