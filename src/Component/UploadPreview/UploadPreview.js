@@ -21,7 +21,6 @@ const UploadPreview = ({ uploadedImage, close, personList }) => {
             <input
                placeholder='Name'
                type='text'
-               min='4'
                value={name}
                onChange={(e) => setName(e.target.value)}
             />

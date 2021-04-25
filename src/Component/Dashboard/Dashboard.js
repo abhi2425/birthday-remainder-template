@@ -44,11 +44,9 @@ class Dashboard extends Component {
       this.setState({ captureEvent: event.target })
       const url = URL.createObjectURL(fileObject)
       this.setState({ uploadedImage: url })
-      console.log(url)
       this.setState({ upload: true })
    }
    closeUploadVault = () => {
-      console.log('close')
       // eslint-disable-next-line react/no-direct-mutation-state
       this.state.captureEvent.value = null
       this.setState({ uploadedImage: '' })
