@@ -17,10 +17,10 @@ class Dashboard extends Component {
       upload: false,
       uploadedImage: '',
       captureEvent: {},
-      personDetails: [...list, ...getListFromLocalStorage(this.state?.uploadedImage)],
+      personDetails: [...list, ...getListFromLocalStorage()],
    }
-   clearHandler = () => this.setState({ personDetails: [] })
-   showHandler = () => this.setState({ personDetails: list })
+   clearHandler = () => this.setState({ showList: false })
+   showHandler = () => this.setState({ showList: true })
    showModalHandler = (person) => {
       this.setState({
          showModal: true,
@@ -34,7 +34,10 @@ class Dashboard extends Component {
    }
    removePersonHandler = (index) => {
       const copy = this.state.personDetails.slice()
+      const person = copy[index]
       copy.splice(index, 1)
+      console.log(person)
+      localStorage.removeItem(person.name + person.age)
       this.setState({
          personDetails: copy,
       })
@@ -51,20 +54,19 @@ class Dashboard extends Component {
       this.state.captureEvent.value = null
       this.setState({ uploadedImage: '' })
       this.setState({ upload: false })
-      console.log(this.state.uploadedImage)
    }
    render() {
       let persons = []
       let button =
-         this.state.personDetails.length === 0 ? (
+         !this.state.showList ? (
             <button className='btn btn-green' onClick={this.showHandler}>
                Show All
             </button>
-         ) : (
+         ) : this.state.personDetails.length ? (
             <button className='btn btn-pink' onClick={this.clearHandler}>
                Clear All
             </button>
-         )
+         ) : null
 
       if (this.state.showList) {
          persons = this.state.personDetails.map((person, index) => {
@@ -90,9 +92,10 @@ class Dashboard extends Component {
                <UploadPreview
                   uploadedImage={this.state.uploadedImage}
                   close={this.closeUploadVault}
-                  personList={this.state.personDetails}
+                  list={this.state.personDetails}
                />
             </Modal>
+            {/* Navbar */}
             <div
                style={{
                   width: '100%',

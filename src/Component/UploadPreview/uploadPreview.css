@@ -1,40 +1,45 @@
 .preview {
-   display: flex;
-   padding: 5rem;
+  display: flex;
+  padding: 5rem;
 }
 .preview input {
-   padding: 10px 20px;
-   font-size: 20px;
-   border-radius: 5px;
-   margin-bottom: 20px;
-   display: block;
-   color: rgb(94, 94, 94);
-   border: 2px solid hotpink;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: block;
+  color: rgb(94, 94, 94);
+  border: 2px solid hotpink;
 }
 .preview input:focus {
-   outline: none;
+  outline: none;
 }
 .preview img {
-   width: 250px;
-   height: 250px;
-   object-fit: cover;
-   border-radius: 100%;
-   margin-right: 3rem;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-right: 3rem;
 }
 .preview .details {
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  font-size: 18px;
+  color: red;
+  font-family: monospace;
 }
 @media screen and (max-width: 700px) {
-   .preview {
-      flex-direction: column;
-   }
-   .preview img {
-      align-self: center;
-      margin: 0;
-      margin-bottom: 1rem;
-   }
-   .modal-container {
-      margin-top: 3rem;
-   }
+  .preview {
+    flex-direction: column;
+  }
+  .preview img {
+    align-self: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .modal-container {
+    margin-top: 3rem;
+  }
 }
